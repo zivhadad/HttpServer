@@ -3,6 +3,10 @@ import os
 import logging
 logging.basicConfig(filename='/var/log/webserver.log', encoding='utf-8', level=logging.DEBUG)
 
+
+flask_env = os.getenv(flask_env)
+if flask_env == "production": 
+    app.run(debug=False)
 app = flask.Flask(__name__)
 
 @app.route("/")
