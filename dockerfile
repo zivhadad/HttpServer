@@ -1,7 +1,7 @@
 FROM alpine:latest
 ARG port
-ARG production
-ENV production=$production
+ARG flask_env
+ENV flask_env=$flask_env
 ENV port=$port
 RUN mkdir app
 WORKDIR /app
