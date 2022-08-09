@@ -1,5 +1,7 @@
 FROM alpine:latest
 ARG port
+ARG production
+ENV production=$production
 ENV port=$port
 RUN mkdir app
 WORKDIR /app
